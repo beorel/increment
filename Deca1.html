@@ -1,0 +1,59 @@
+<!--
+    1. p element text changes at the click of increment or decrement
+    user clicks increment, 
+    p element has a number 
+    and the number icreases
+    vice versa
+-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Click Counter</title>
+</head>
+
+<body>
+    <script>
+        function increaseValue() {
+            let pElement = document.getElementsByClassName("counter");
+
+            previousCount = pElement[0].textContent;
+            // console.log(previousCount)
+            console.log("previousCount = " + previousCount + "type is = " + typeof previousCount);
+            previousCount = parseInt(previousCount);
+            //console.log(previousCount)
+            console.log("previousCount = " + previousCount + "type is = " + typeof previousCount);
+            previousCount++;
+
+            pElement[0].innerHTML = previousCount;
+
+            //console.log(previousCount);
+
+        }
+
+        function decreaseValue() {
+            let anotherP = document.getElementsByClassName("counter");
+            previousCount = anotherP[0].textContent;
+        console.log("previousCount = " + previousCount + "type is = " + typeof previousCount);
+            previousCount = parseInt(previousCount);
+        console.log("previousCount = " + previousCount + "type is = " + typeof previousCount);
+            previousCount--;
+            anotherP[0].innerHTML = previousCount;
+
+        }
+
+
+
+
+    </script>
+    <div id="app">
+        <p class="counter">0</p>
+        <button type="button" class="increment" onclick="increaseValue();">Increment</button>
+        <button type="button" class="decrement" onclick="decreaseValue();">Decrement</button>
+
+    </div>
+</body>
+
+</html>
