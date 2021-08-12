@@ -1,0 +1,61 @@
+<!-- add the following elements with the correct attributes.
+    - a paragraph element - Add a class "counter" to this element
+    - a button element - Add a class "increment" to this element. the element's text
+    should have a text "increment".
+    - another button element. Add a class "decrement" to this element. the element's text
+    should have a text "decrement".
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Click Counter</title>
+</head>
+
+<body>
+    <script>
+        /*      method one: link---->  https://codepen.io/mtbroomell/pen/yNwwdv
+        function increasevalue() {
+            var number = parseInt(document.getElementsByClassName("increment").value, 10);
+            //value = isNaN(number) ? 0: number;
+            if (isNaN = number) {
+                return 0;
+            } else {
+                return number;
+            }
+            number++;
+            document.getElementsByClassName("increment").value = number;
+        }*/
+        var g = 0;
+        function increaseValue() {
+            // if (g < 10){
+            g++;
+            //}        
+            document.getElementsById('increment').value = g++;
+        }
+        var i = 0;
+        function decreaseValue() {
+            //if (g > 0) {
+            i--;
+            // }
+            document.getElementsById('decrement').value = i--;
+        }
+
+    </script>
+
+    <!--<div id="app">
+        <p class="counter"></p>
+        <!--<div id="increment">-->
+        <button type="text" id="increment" value="0" onclick="increaseValue();">Increment</button>
+   
+        <!--</div>-->
+        <!--<div id="increment"><div id="decrement">-->
+
+        <button type="text" id="decrement" value="1" onclick="decreaseValue();">Decrement</button>
+       
+    <!--</div>
+ 
+</body>
+
+</html>
